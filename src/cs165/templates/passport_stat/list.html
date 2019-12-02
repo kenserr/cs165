@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for object in object_list%}
+<ol>
+<li>Passport Status: {{ object.passport_status }}</li>
+<li>Extra Documents: {{ object.extra_documents }}</li>
+</ol>
+{% endfor %}
+
+{%endblock%}

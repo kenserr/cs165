@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for object in object_list%}
+<ol>
+<li> Detailed View: <a href='/ph/{{ object.passport_no }}/'>Link</a></li>
+<li>Passport Number: {{ object.passport_no }}</li>
+<li>Applicant Name: {{ object.applicant_name }}</li>
+</ol>
+{% endfor %}
+
+<a href='/ph/new/'>Create Passport Holder</a>
+{%endblock%}

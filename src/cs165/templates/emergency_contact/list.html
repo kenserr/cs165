@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for object in object_list%}
+<ol><li> Detailed View: <a href='/ec/{{ object.emergency_contact }}/'>Link</a></li>
+<li>EC Name: {{ object.emergency_contact }}</li>
+<li>Contact No: {{ object.emergency_contact_number }}</li>
+</ol>
+{% endfor %}
+
+<a href='/ec/new/'>Create new</a>
+{%endblock%}

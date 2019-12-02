@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{%load index%}
+{% block content %}
+
+<h3>Applicants, along with their emergency contacts and emergency contact numbers who are required to submit an affidavit of explanation due to their passport status </h3>
+<table class="table-bordered">
+	<th> Applicant Name</th>
+	<th> Passport Status</th>
+	<th> Emergency Contact </th>
+	<th> Emergency Contact Number </th>
+{% for i in n %}
+<tr>
+	<td>{{app|index:i}}</td>
+	<td>{{stats|index:i}}</td>
+	<td>{{ object_list|index:0|index:i }}</td>
+	<td>{{ object_list|index:1|index:i }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

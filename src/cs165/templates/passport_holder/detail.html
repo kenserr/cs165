@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<ol>
+<li>Passport Number: {{ object.passport_no }}</li>
+<li>Applicant Name: {{ object.applicant_name }}</li>
+<li>Sex: {{ object.sex }}</li>
+<li>Birthdate: {{ object.birthdate }}</li>
+<li>Place of Birth: {{ object.place_of_birth }}</li>
+<li>Citizenship Acquired by: {{ object.citizenship_acquiring_method }}</li>
+<li>PDA: {{ object.preferred_delivery_address }}</li>
+<li>Contact Number: {{ object.contact_number }}</li>
+<li>Email: {{ object.email_address }}</li>
+<li>Emergency Contact: {{ object.emergency_contact }}</li>
+<li>Issuing Authority: {{ object.issuing_authority }}</li>
+<li>Passport Status: {{ object.passport_status }}</li>
+
+<p><a href='update'>Edit</a></p>
+<p><a href='delete'>Delete</a></p>
+<p><a href='/ph/all/'>Back</a></p>
+</ol>
+{%endblock%}

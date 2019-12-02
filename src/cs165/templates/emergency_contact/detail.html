@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<ol>
+<li>EC Name: {{ object.emergency_contact }}</li>
+<li>EC Number: {{ object.emergency_contact_number }}</li>
+</ol>
+
+<p><a href='update'>Edit</a></p>
+<p><a href='/ec/all/'>Back</a></p>
+{%endblock%}
